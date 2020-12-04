@@ -1,0 +1,14 @@
+---
+# defaults file for ansible-role-metadata
+
+metadata_ansible: "true"
+
+metadata_id: default-id
+metadata_fqn: default-fqn
+
+metadata_owner: default-owner
+metadata_environment: default-environment
+metadata_service: default-service
+metadata_domain: cloud
+
+metadata_url: "{{ metadata_service }}.{{ metadata_environment }}.{{ metadata_owner }}.{{ metadata_domain }}"
