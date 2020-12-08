@@ -3,12 +3,11 @@
 
 metadata_ansible: "true"
 
-metadata_id: default-id
-metadata_fqn: default-fqn
-
+metadata_domain: cloud
 metadata_owner: default-owner
 metadata_environment: default-environment
 metadata_service: default-service
-metadata_domain: cloud
+metadata_id: default-id
 
+metadata_fqn: "{{ metadata_owner }}-{{ metadata_environment }}-{{ metadata_service }}"
 metadata_url: "{{ metadata_service }}.{{ metadata_environment }}.{{ metadata_owner }}.{{ metadata_domain }}"
