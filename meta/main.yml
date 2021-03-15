@@ -1,5 +1,7 @@
 ---
 galaxy_info:
+  role_name: metadata
+  namespace: wazo
   author: "Wazo Developers"
   description: "Ansible role defining metadata default, nothing more"
   company: "Wazo https://wazo.io"
