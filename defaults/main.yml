@@ -9,5 +9,8 @@ metadata_environment: default-environment
 metadata_service: default-service
 metadata_id: default-id
 
-metadata_fqn: "{{ metadata_owner }}-{{ metadata_environment }}-{{ metadata_service }}"
-metadata_url: "{{ metadata_service }}.{{ metadata_environment }}.{{ metadata_owner }}.{{ metadata_domain }}"
+metadata_fqn: >-
+ {{ metadata_owner }}-{{ metadata_environment }}-{{ metadata_service }}
+metadata_url: >- 
+  {{ metadata_service }}.{{ metadata_environment }}.{{ metadata_owner }}.{{ metadata_domain }}
+
