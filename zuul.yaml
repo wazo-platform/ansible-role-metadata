@@ -1,0 +1,11 @@
+---
+- project:
+    wazo-check:
+      jobs:
+        - wazo-tox-molecule-bullseye
+    wazo-gate:
+      jobs:
+        - wazo-tox-molecule-bullseye
+    auto-merge:
+      jobs:
+        - wazo-tox-molecule-bullseye
