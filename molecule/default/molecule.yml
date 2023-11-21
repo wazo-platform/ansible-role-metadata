@@ -1,0 +1,25 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint: |
+  set -e
+  yamllint .
+  ansible-lint .
+  flake8
+platforms:
+  - name: molecule-metadata-debian11
+    image: jrei/systemd-debian:11
+    privileged: True
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
+    cgroupns_mode: host
+    command: /lib/systemd/systemd
+    groups:
+      - molecule_metadata
+    networks:
+      - name: molecule-metadata
+provisioner:
+  name: ansible
+  log: true
