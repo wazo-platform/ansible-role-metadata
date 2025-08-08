@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'molecule'
+    label 'molecule-aws'
   }
   stages {
     stage ('Test') {
