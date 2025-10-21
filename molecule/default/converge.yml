@@ -18,4 +18,3 @@
         that:
           - metadata_fqn == "wazo-test-metadata"
           - metadata_url == "metadata.test.wazo.cloud"
-
