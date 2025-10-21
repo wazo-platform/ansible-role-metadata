@@ -10,7 +10,7 @@
     metadata_service: metadata
 
   roles:
-    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+    - role: wazo.metadata
 
   post_tasks:
     - name: Assert variables are well set
