@@ -1,7 +1,7 @@
 ---
 - name: Converge
   hosts: molecule_metadata
-  become: yes
+  become: true
 
   vars:
     ansible_python_interpreter: python3
@@ -10,7 +10,7 @@
     metadata_service: metadata
 
   roles:
-    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+    - role: wazo.metadata
 
   post_tasks:
     - name: Assert variables are well set
@@ -18,4 +18,3 @@
         that:
           - metadata_fqn == "wazo-test-metadata"
           - metadata_url == "metadata.test.wazo.cloud"
-

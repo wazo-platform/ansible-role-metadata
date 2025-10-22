@@ -10,11 +10,7 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - buster
-        - bullseye
-    - name: Ubuntu
-      versions:
-        - bionic
+        - bookworm
   galaxy_tags:
     - system
 dependencies: []
