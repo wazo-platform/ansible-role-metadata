@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: molecule-metadata-debian11
-    image: jrei/systemd-debian:11
+    image: wazoplatform/systemd-debian:11
     privileged: true
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
@@ -16,7 +16,7 @@ platforms:
     networks:
       - name: molecule-metadata
   - name: molecule-metadata-debian12
-    image: jrei/systemd-debian:12
+    image: wazoplatform/systemd-debian:12
     privileged: true
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
